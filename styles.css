@@ -1269,7 +1269,9 @@ button:hover {
 /* Subtle press effect */
 a:active,
 button:active {
-  transform: translateY(0) scale(0.98);
+  transform: scale(0.94);
+  opacity: 0.8;
+  transition: transform 120ms ease, opacity 120ms ease;
 }
 
 /* Keyboard accessibility */
