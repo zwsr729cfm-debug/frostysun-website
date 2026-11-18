@@ -55,3 +55,27 @@ const yearElement = document.getElementById('year');
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
+
+// Scroll reveal animation
+const revealElements = document.querySelectorAll(
+  '.intro, .statement, .projects, .capabilities, .contact'
+);
+
+revealElements.forEach(element => {
+  element.classList.add('reveal');
+});
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+revealElements.forEach(element => {
+  revealObserver.observe(element);
+});
