@@ -1391,3 +1391,9 @@ html {
 .project-caption {
   display: none;
 }
+
+.social-arrow {
+  color: var(--brand-champagne);
+  font-size: 0.85em;
+  margin-left: 3px;
+}
