@@ -1300,3 +1300,37 @@ html {
     scroll-behavior: auto;
   }
 }
+
+/* Cinematic hero headline reveal */
+.hero-line-one,
+.hero-line-two {
+  display: block;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: cinematicReveal 1s ease forwards;
+}
+
+.hero-line-one {
+  animation-delay: 0.4s;
+}
+
+.hero-line-two {
+  animation-delay: 1.1s;
+}
+
+@keyframes cinematicReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-line-one,
+  .hero-line-two {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
