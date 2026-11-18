@@ -1247,3 +1247,42 @@ img {
     transition: none;
   }
 }
+
+/* Premium interactive effects */
+a,
+button {
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease,
+    opacity 250ms ease,
+    box-shadow 250ms ease;
+}
+
+/* Gentle hover lift */
+a:hover,
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Subtle press effect */
+a:active,
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand-amber);
+  outline-offset: 4px;
+}
+
+/* Disable hover movement on touch devices */
+@media (hover: none) {
+  a:hover,
+  button:hover {
+    transform: none;
+  }
+}
