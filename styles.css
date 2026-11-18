@@ -1385,3 +1385,9 @@ html {
   }
 }
 
+.project-glow,
+.project-orbit,
+.project-name,
+.project-caption {
+  display: none;
+}
