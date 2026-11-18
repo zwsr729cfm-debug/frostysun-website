@@ -1288,3 +1288,15 @@ button:focus-visible {
     transform: none;
   }
 }
+
+/* Smooth page navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
