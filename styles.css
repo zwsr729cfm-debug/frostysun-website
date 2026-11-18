@@ -1357,3 +1357,30 @@ html {
     transform: none;
   }
 }
+
+/* Refined mobile navigation */
+@media (max-width: 700px) {
+  .navigation.open {
+    animation: menuReveal 0.3s ease both;
+  }
+
+  .navigation a {
+    transition: color 250ms ease, padding-left 250ms ease;
+  }
+
+  .navigation a:active {
+    color: var(--brand-amber);
+    padding-left: 8px;
+  }
+}
+
+@keyframes menuReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
