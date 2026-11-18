@@ -1393,7 +1393,9 @@ html {
 }
 
 .social-arrow {
-  color: var(--brand-champagne);
-  font-size: 0.85em;
-  margin-left: 3px;
+  color: #F0C492;
+  font-family: Arial, sans-serif;
+  font-variant-emoji: text;
+  font-size: 16px;
+  margin-left: 5px;
 }
