@@ -1334,3 +1334,26 @@ html {
     animation: none;
   }
 }
+
+/* Slow cinematic hero background movement */
+.hero-image {
+  animation: heroSlowZoom 25s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes heroSlowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-image {
+    animation: none;
+    transform: none;
+  }
+}
